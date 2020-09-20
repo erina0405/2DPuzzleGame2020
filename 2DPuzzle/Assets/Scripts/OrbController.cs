@@ -13,18 +13,26 @@ public class OrbController : MonoBehaviour, IPointerDownHandler, IPointerEnterHa
 
     public enum OrbType
     {
-        Invalide =-1,
+        Invalide = -1,
         BlueOrb,
         GreenOrb,
         RedOrb,
         YellowOrb,
     }
 
-    public OrbType thisOrbType = OrbType. Invalide;
+    public OrbType thisOrbType = OrbType.Invalide;
+
+    public ParticleSystem ComboEffect = null;
+
+    public OrbGenerater orbGenerater = null;
 
     private void Awake()
     {
         m_spriteRenderer = GetComponent<SpriteRenderer>();
+
+
+        ComboEffect.gameObject.SetActive(false);
+
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -67,6 +75,9 @@ public class OrbController : MonoBehaviour, IPointerDownHandler, IPointerEnterHa
             {
                 orb.SetActive(false);
             }
+
+            orbGenerater.OrbGenerate(comboCounter.ComboCount);
+
         }
         comboCounter.ClearCombo();
     }

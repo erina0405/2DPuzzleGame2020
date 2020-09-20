@@ -9,13 +9,13 @@ public class LimitTimeCountViewer : MonoBehaviour
 
     private float m_limitTime = 60;
 
-    void Start()
+    private void Start()
     {
-        
+
     }
 
-    
-    void Update()
+
+    private void Update()
     {
         //1秒に1秒ずつ減らしていく
         m_limitTime -= Time.deltaTime;

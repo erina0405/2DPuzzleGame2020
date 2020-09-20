@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2795708820819315322}
   - component: {fileID: 2795708820819315268}
   m_Layer: 0
-  m_Name: BlueOrb
+  m_Name: YellowOrb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d6c89d920099c1e4db30090b44475f7a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cae71f808f62afe4b84b8d63ece55adb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comboCounter: {fileID: 0}
-  thisOrbType: 0
+  thisOrbType: 3
   ComboEffect: {fileID: 5161365155305954742}
 --- !u!1 &8312417126631739792
 GameObject:
