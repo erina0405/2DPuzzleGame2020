@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class LimitTimeCountViewer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI m_TimeText = null;
 
-    private float m_limitTime = 60;
+    public float m_limitTime = 60;
 
     private void Start()
     {
@@ -22,5 +23,8 @@ public class LimitTimeCountViewer : MonoBehaviour
         //マイナスは表示しない
         if (m_limitTime < 0) m_limitTime = 0;
         m_TimeText.text = $"{m_limitTime}";
+
+        
+            
     }
 }

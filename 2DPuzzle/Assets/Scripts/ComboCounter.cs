@@ -49,5 +49,15 @@ public class ComboCounter : MonoBehaviour
         DragObjList.Clear();
         
     }
+
+    public bool CheckCombo(Transform thisOrbTransform)
+    {
+        //DragObjListの最後のobjectと次に入ってくるthisOrbTransformとの距離
+        var distance = Vector2.Distance(thisOrbTransform.transform.position, DragObjList.LastOrDefault().transform.position);
+        Debug.Log(distance);
+        
+        //距離が2以下ならtrue
+        return distance <= 2f;
+    }
 }
 

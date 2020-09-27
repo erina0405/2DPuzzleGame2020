@@ -47,6 +47,13 @@ public class OrbController : MonoBehaviour, IPointerDownHandler, IPointerEnterHa
             return;
         }
 
+        
+        if (!comboCounter.CheckCombo(this.transform))
+        {
+            return;
+        }
+
+   
         if (comboCounter.DragObjList.Contains(this.gameObject))
         {
             if (comboCounter.DragObjList.Count.Equals(1))
