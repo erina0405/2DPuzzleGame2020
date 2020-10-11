@@ -7,14 +7,29 @@ using UnityEngine.SocialPlatforms.Impl;
 public class LimitTimeCountViewer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI m_TimeText = null;
+  
+        public float m_limitTime = 0f;
 
-    public float m_limitTime = 60;
+    //DevilOrbに触れると5秒縮む
+    public float MinusSeconds = 5f;
+
+    //3コンボより多く消した時に5秒追加
+    public float PlusSeconds = 5f;
 
     private void Start()
     {
-
+        m_limitTime = 60f;
     }
 
+    public void MinusTime()
+    {
+        m_limitTime -= MinusSeconds;
+    }
+
+    public void PlusTime()
+    {
+        m_limitTime += PlusSeconds;
+    }
 
     private void Update()
     {

@@ -17,4 +17,9 @@ public class ScoreViewer : MonoBehaviour
 
         m_scoreText.text = $"{m_comboCounter.CurrentComboCount}";
     }
+
+    public void MinusScore()
+    {
+        Score = m_comboCounter.CurrentComboCount -= 5;
+    }
 }
